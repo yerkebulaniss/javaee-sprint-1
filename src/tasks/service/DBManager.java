@@ -53,6 +53,11 @@ public class DBManager {
     // TODO: реализовать удаление таска по айди
     public static void delete(Long id) {
         // ваш код
+        for (TaskEntity task : taskList) {
+            if (id.equals(task.getId())) {
+                taskList.remove(task);
+            }
+        }
     }
 
 }
